@@ -1,0 +1,127 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProjectGuid>{5e301f3e-a771-4ce7-9a03-e83bf111731a}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SnakeAndLadders</AssemblyName>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <Name>Accessibility</Name>
+    </Reference>
+    <Reference Include="AxInterop.MediaPlayer">
+      <Name>AxInterop.MediaPlayer</Name>
+      <HintPath>_lib\AxInterop.MediaPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MediaPlayer">
+      <Name>Interop.MediaPlayer</Name>
+      <HintPath>..\..\Interop.MediaPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Name>System.Deployment</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Security">
+      <Name>System.Security</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Game.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\GameBeads.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Ladder.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\MainBoard.cs">
+      <SubType>Form</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Program.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Properties\Resources.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Properties\Settings.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\RandomPic.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+    <Compile Include="SnakeAndLadders\Snake.cs">
+      <SubType>Code</SubType>
+      <Name>Compile</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SnakeAndLadders\MainBoard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainBoard.cs</DependentUpon>
+      <Name>EmbeddedResource</Name>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SnakeAndLadders\Properties\Resources.resx">
+      <Name>EmbeddedResource</Name>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
